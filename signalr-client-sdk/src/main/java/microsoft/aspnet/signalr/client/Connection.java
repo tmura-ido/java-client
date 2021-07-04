@@ -7,7 +7,6 @@ See License.txt in the project root for license information.
 package microsoft.aspnet.signalr.client;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 import com.google.gson.Gson;
@@ -47,7 +46,7 @@ public class Connection implements ConnectionBase {
 
     private String mQueryString;
 
-    private Map<String, String> mHeaders = new HashMap<String, String>();
+    private Map<String, String> mHeaders;
 
     private UpdateableCancellableFuture<Void> mConnectionFuture;
 
@@ -543,7 +542,7 @@ public class Connection implements ConnectionBase {
             mConnectionToken = null;
             mCredentials = null;
             mGroupsToken = null;
-            mHeaders.clear();
+            mHeaders = null;
             mMessageId = null;
             mTransport = null;
 
@@ -554,11 +553,6 @@ public class Connection implements ConnectionBase {
     @Override
     public Gson getGson() {
         return mGson;
-    }
-
-    @Override
-    public void setGson(Gson gson) {
-        mGson = gson;
     }
 
     @Override

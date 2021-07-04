@@ -109,7 +109,7 @@ class NetworkRunnable implements Runnable {
             if (mResponseStream != null) {
                 mResponseStream.close();
             }
-        } catch (Exception e) {
+        } catch (IOException e) {
         }
     }
 
@@ -119,7 +119,7 @@ class NetworkRunnable implements Runnable {
      * @param request
      *            The request info
      * @return An HttpURLConnection to execute the request
-     * @throws java.io.IOException
+     * @throws IOException
      */
     static HttpURLConnection createHttpURLConnection(Request request) throws IOException {
         URL url = new URL(request.getUrl());

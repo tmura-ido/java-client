@@ -176,11 +176,6 @@ public interface ConnectionBase {
     Gson getGson();
 
     /**
-     * Sets the Gson instance used by the connection
-     */
-    void setGson(Gson gson);
-
-    /**
      * Returns the JsonParser used by the connection
      */
     JsonParser getJsonParser();

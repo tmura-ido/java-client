@@ -33,7 +33,7 @@ public interface Response {
      * Reads the response stream to the end and returns its value as a String
      * 
      * @return The response content as a String
-     * @throws java.io.IOException
+     * @throws IOException
      */
     public String readToEnd() throws IOException;
 
@@ -41,7 +41,7 @@ public interface Response {
      * Reads one line from the response stream
      * 
      * @return A line from the response stream
-     * @throws java.io.IOException
+     * @throws IOException
      */
     public String readLine() throws IOException;
 
@@ -54,7 +54,7 @@ public interface Response {
      * Reads the response stream to the end and returns its value as a Byte[]
      * 
      * @return The response content as a Byte[]
-     * @throws java.io.IOException
+     * @throws IOException
      */
     public byte[] readAllBytes() throws IOException;
 }
